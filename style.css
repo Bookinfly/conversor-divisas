@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #ddf;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+:root {
+    --blue--1--: #0554F2;
+    --blue--light--2: #1D64F2;
+    --dark--blue--3--: #0B59BF;
+    --orange--resalte--1--: #F2780C;
+    --dark--orange--2--: #D9560B;
+    --white--1--: #ddf;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color:var(--blue--1--);
+    background-color: var(--white--1--);
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "footer"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh;
+}
+
+.header{
+    grid-area: "header";
+    background-image: url(./img/AlbedoBase_XL_Un_monton_de_billetes_de_diferentes_paises_1.jpg);
+    position: relative;
+}
+
+.header__div__img {
+    width: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    filter: drop-shadow(8px 5px 10px #02163d);
+    -webkit-filter: drop-shadow(8px 5px 10px #02163d);
+}
+
+/* .header--gradient{
+    background-image: linear-gradient(#ddf, transparent);
+    padding: 20px;
+
+} */
+
+.main{
+    grid-area: "main";
+    background-color: var(--dark--blue--3--);
+    color: var(--white--1--);
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    padding: 5vw;
+    margin: 30px 10px 30px 10px;
+}
+
+.section__h1{
+    color: var(--orange--resalte--1--);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.section__h3{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section__p {
+    font-size: 0.7rem;
+    margin-top: 20px;
+    color: var(--orange--resalte--1--);
+    text-align: center;
+    font-weight: bold;
+}
+
+.section__form{
+    border: solid var(--white--1--) 2px;
+    padding: 10px 5px 10px 5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section__form__label, .section__form__input, .section__form__select{
+    display: block;
+    margin-top: 6px;
+}
+
+.section__form__select, input{
+    color: var(--blue--light--2);
+}
+
+.section__form__button, .section__form__input--reset{
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    color: var(--white--1--);
+    background-color: var(--dark--orange--2--);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 20px 10px 20px 10px;
+    padding: 5px;
+}
+
+.section__form__button:hover, .section__form__input--reset:hover{
+    background-color: var(--blue--light--2);
+}
+
+.footer{
+    grid-area: "footer";
+    background-color: var(--dark--blue--3--);
+    color: var(--white--1--);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.footer__section__a__img {
+    width: 30px;
+}
+
+.footer__section__h2{
+    font-size: 1rem;
+    color: #F2780C;
+}
+
+.footer__section__p{
+    font-size: 0.6em;
+    margin: 10px;
+}

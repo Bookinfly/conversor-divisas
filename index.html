@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="./img/mini.png" type="image/x-icon"><!--volver a descargar en cuadrado-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En esta página encontrarás un conversor de divisas.">
+    <meta name="keywords" content="dólar, divisas, cambio, conversor, calculadora">
+    <meta name="author" content="Nahuel Amado (Bookinfly)">
+    <meta name="application-name" content="Proyecto de práctica con API">
+    <meta name="generator" content="VSCode">
+    <meta name="robots" content="index, nofollow">
+    <html lang="es">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Moneda</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header--gradient">
+            <img src="./img/logoWeb1.png" alt="Logo de pesos contra el mundo" class="header__div__img">
+        </div>
+    </header>
+    <main class="main">
+        <section class="section--presentation">
+            <h1 class="section__h1">Pesos contra el Mundo</h1>
+            <h3 class="section__h3">Con el poder de ExchangeRate-API: Compara tus ahorros en pesos argentinos con otras monedas al instante.</h3>
+        </section>
+
+        <section aria-describedby="Conversor de moneda en tiempo real" class="section">
+            <h2 class="section__h2">Conversor de Divisas</h2>
+            <form action="" class="section__form">
+                <label for="quantity" class="section__form__label">Que cantidad le gustará convertir</label>
+                <input type="number" name="quantity" id="quantity" class="section__form__input">
+                <label for="currency_i_have" class="section__form__label">¿De que divisa es tu dinero?</label>
+                <select name="currency_i_have" id="currency_i_have" class="section__form__select">
+                    <option value="USD">Dólares (USD)</option>
+                    <option value="ARS">Pesos Argentinos (ARS)</option>
+                    <option value="EUR">Euros (EUR)</option>
+                    <option value="BRL">Reales (BRL)</option>
+                    <option value="GBP">Libras Esterlinas (GBP)</option>
+                    <option value="CLP">Pesos Chilenos (CLP)</option>
+                    <option value="UYU">Pesos Uruguayos (UYU)</option>
+                    <option value="JPY">Yen Japonés (JPY)</option>                    
+                </select>
+
+                <label for="currency_i_want" class="section__form__label">¿A que divisa te gustaría cambiarlo?</label>
+                <select name="currency_i_want" id="currency_i_want" class="section__form__select">
+                    <option value="USD">Dólares (USD)</option>
+                    <option value="ARS">Pesos Argentinos (ARS)</option>
+                    <option value="EUR">Euros (EUR)</option>
+                    <option value="BRL">Reales (BRL)</option>
+                    <option value="GBP">Libras Esterlinas (GBP)</option>
+                    <option value="CLP">Pesos Chilenos (CLP)</option>
+                    <option value="UYU">Pesos Uruguayos (UYU)</option>
+                    <option value="JPY">Yen Japonés (JPY)</option>                    
+                </select>
+
+                <button class="section__form__button"> Calcular 🪙 </button>
+                <input type="reset" value="Resetear" class="section__form__input section__form__input--reset">
+            </form>
+
+            <div id="result" class="section__div">
+                <p class="section__div__p">Sus <span class="section__div__p__span your--currency"></span>, tienen un valor de <span class="section__div__p__span currency--value--buy"></span> para la compra</p>
+                <p class="section__div__p">Sus <span class="section__div__p__span your--currency"></span>, tienen un valor de <span class="section__div__p__span currency--value--sell"></span> para la venta</p>
+            </div>
+
+            <p class="section__p">Con esta aplicación, puedes conocer el valor de tu dinero en otras divisas de forma rápida y sencilla. Solo ingresa la cantidad y selecciona la moneda, y recibirás el valor actualizado al instante.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <section aria-describedby="información del proyecto" class="footer__section">
+            <h2 class="footer__section__h2">Proyecto de Estudio</h2>
+            <p class="footer__section__p">Autor Nahuel Amado (Bookinfly)</p>
+            <p class="footer__section__p">Estudiante de Desarrollo Web</p>
+            <p class="footer__section__p">El proyecto es una práctica realizada para practicar lo aprendido en el curso de Dalto de Mid lvl en Js, utilizando ExchangeRate-API</p>
+        </section>
+        <section aria-describedby="Redes y github" class="footer__section">
+            <a href="https://github.com/Bookinfly" class="footer__section__a"><img src="./img/github_2504911.png" alt="Logo github" class="footer__section__a__img"></a>
+            <a href="https://www.linkedin.com/in/nahuel-amado/" class="footer__section__a"> <img src="./img/linkedin_2504923.png" alt="Logo de Linkedin" class="footer__section__a__img"></a>
+        </section>
+    </footer>
+    <script src="code.js"></script>
+</body>
+</html>
