@@ -33,7 +33,7 @@ body {
     "footer"
     "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 15vh;
+    grid-template-rows: 18vh;
 }
 
 .header{
@@ -43,7 +43,7 @@ body {
 }
 
 .header__div__img {
-    width: 100px;
+    width: 150px;
     position: absolute;
     left: 0;
     right: 0;
@@ -61,6 +61,7 @@ body {
 } */
 
 .main{
+    min-width: 300px;
     grid-area: "main";
     background-color: var(--dark--blue--3--);
     color: var(--white--1--);
@@ -83,9 +84,15 @@ body {
 }
 
 .section__h3{
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 20px;
+}
+
+.section__h2 {
+    color: var(--orange--resalte--1--);
+    font-size: 1rem;
+    margin-top: 30px;
 }
 
 .section__p {
@@ -98,7 +105,7 @@ body {
 
 .section__form{
     border: solid var(--white--1--) 2px;
-    padding: 10px 5px 10px 5px;
+    padding: 15px 10px 15px 10px;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -111,6 +118,7 @@ body {
 .section__form__label, .section__form__input, .section__form__select{
     display: block;
     margin-top: 6px;
+    font-size: 0.85rem;
 }
 
 .section__form__select, input{
@@ -136,24 +144,55 @@ body {
     background-color: var(--blue--light--2);
 }
 
+.section__form__div {
+    display: none;
+}
+
+.section__form__div__p {
+    font-size: 0.85rem;
+}
+
+.section__form__div__p__span {
+    color: var(--orange--resalte--1--);
+    font-weight: bolder;
+    font-style: italic;
+}
+
 .footer{
+    min-width: 300px;
     grid-area: "footer";
     background-color: var(--dark--blue--3--);
     color: var(--white--1--);
     margin-top: 20px;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__section {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+        border: solid var(--white--1--) 2px;
 }
 
 .footer__section__a__img {
     width: 30px;
+    margin: 10px;
 }
+
 
 .footer__section__h2{
     font-size: 1rem;
     color: #F2780C;
 }
 
-.footer__section__p{
-    font-size: 0.6em;
+.footer__section__small {
     margin: 10px;
+    font-size: 0.5rem;
+    display: block;
 }

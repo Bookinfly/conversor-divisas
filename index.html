@@ -48,8 +48,8 @@
 
                 <label for="currency_i_want" class="section__form__label">¿A que divisa te gustaría cambiarlo?</label>
                 <select name="currency_i_want" id="currency_i_want" class="section__form__select">
-                    <option value="USD">Dólares (USD)</option>
                     <option value="ARS">Pesos Argentinos (ARS)</option>
+                    <option value="USD">Dólares (USD)</option>
                     <option value="EUR">Euros (EUR)</option>
                     <option value="BRL">Reales (BRL)</option>
                     <option value="GBP">Libras Esterlinas (GBP)</option>
@@ -58,14 +58,15 @@
                     <option value="JPY">Yen Japonés (JPY)</option>                    
                 </select>
 
-                <button class="section__form__button"> Calcular 🪙 </button>
+                <button class="section__form__button" type="button" id="boton"> Calcular 🪙 </button>
                 <input type="reset" value="Resetear" class="section__form__input section__form__input--reset">
+
+                <div id="result" class="section__form__div">
+                   <!--INSERTAMOS CON JS ESTA PARTE-->
+                </div>
             </form>
 
-            <div id="result" class="section__div">
-                <p class="section__div__p">Sus <span class="section__div__p__span your--currency"></span>, tienen un valor de <span class="section__div__p__span currency--value--buy"></span> para la compra</p>
-                <p class="section__div__p">Sus <span class="section__div__p__span your--currency"></span>, tienen un valor de <span class="section__div__p__span currency--value--sell"></span> para la venta</p>
-            </div>
+            
 
             <p class="section__p">Con esta aplicación, puedes conocer el valor de tu dinero en otras divisas de forma rápida y sencilla. Solo ingresa la cantidad y selecciona la moneda, y recibirás el valor actualizado al instante.</p>
         </section>
@@ -73,9 +74,9 @@
     <footer class="footer">
         <section aria-describedby="información del proyecto" class="footer__section">
             <h2 class="footer__section__h2">Proyecto de Estudio</h2>
-            <p class="footer__section__p">Autor Nahuel Amado (Bookinfly)</p>
-            <p class="footer__section__p">Estudiante de Desarrollo Web</p>
-            <p class="footer__section__p">El proyecto es una práctica realizada para practicar lo aprendido en el curso de Dalto de Mid lvl en Js, utilizando ExchangeRate-API</p>
+            <small class="footer__section__small">Autor Nahuel Amado (Bookinfly)</small>
+            <small class="footer__section__small">Estudiante de Desarrollo Web</small>
+            <small class="footer__section__small">El proyecto es una práctica realizada para practicar lo aprendido en el curso de Dalto de Mid lvl en Js, utilizando ExchangeRate-API</small>
         </section>
         <section aria-describedby="Redes y github" class="footer__section">
             <a href="https://github.com/Bookinfly" class="footer__section__a"><img src="./img/github_2504911.png" alt="Logo github" class="footer__section__a__img"></a>
