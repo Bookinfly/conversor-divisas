@@ -6,6 +6,12 @@
     font-size: 16px;
 }
 
+em{
+    font-size: 1em;
+    font-style: none;
+    color: #F2780C;
+}
+
 :root {
     --blue--1--: #0554F2;
     --blue--light--2: #1D64F2;
@@ -157,6 +163,53 @@ body {
     font-weight: bolder;
     font-style: italic;
 }
+
+.section__table {
+    margin: 60px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+.section__table td {
+    border: var(--white--1--) solid 1px;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.section__table th{
+    border: var(--white--1--) solid 1px;
+    padding: 10px;
+}
+
+.borde1{
+    border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    -moz-border-radius: 0 0 0 6px;
+    -ms-border-radius: 0 0 0 6px;
+    -o-border-radius: 0 0 0 6px;
+}
+
+.borde2{
+    border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    -moz-border-radius: 0 0 6px 0;
+    -ms-border-radius: 0 0 6px 0;
+    -o-border-radius: 0 0 6px 0;
+}
+
+.section__table__caption {
+    background-color: var(--white--1--);
+    color: var(--dark--blue--3--);
+    border: var(--white--1--) solid 1px;
+    border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    -ms-border-radius: 6px 6px 0 0;
+    -o-border-radius: 6px 6px 0 0;
+    padding: 10px;
+}
+
 
 .footer{
     min-width: 300px;
