@@ -80,10 +80,6 @@ peticion
     })
     .catch(err=>console.log(err));
 
-
-
-
-
 ////los valores de la tabla requieren ajustarse para ser comparados con 1 dólar
 ////la tabla no aparece, algún problema hay
 
