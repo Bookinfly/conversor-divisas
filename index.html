@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" href="./img/mini.png" type="image/x-icon"><!--volver a descargar en cuadrado-->
+    <link rel="icon" href="./img/mini.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="En esta página encontrarás un conversor de divisas.">
@@ -9,13 +9,22 @@
     <meta name="author" content="Nahuel Amado (Bookinfly)">
     <meta name="application-name" content="Proyecto de práctica con API">
     <meta name="generator" content="VSCode">
-    <meta name="robots" content="index, nofollow">
-    <html lang="es">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Conversor de Moneda - Pesos Contra el Mundo">
+    <meta property="og:description" content="Convierte tus ahorros en pesos argentinos a otras divisas de forma rápida y sencilla.">
+    <meta property="og:image" content="https://bookinfly.github.io/conversor-divisas/img/logoWeb1.png">
+    <meta property="og:url" content="https://bookinfly.github.io/conversor-divisas">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Conversor de Moneda - Pesos Contra el Mundo">
+    <meta name="twitter:description" content="Convierte tus ahorros en pesos argentinos a otras divisas de forma rápida y sencilla.">
+    <meta name="twitter:image" content="https://bookinfly.github.io/conversor-divisas/img/logoWeb1.png">
+    <link rel="canonical" href="https://bookinfly.github.io/conversor-divisas">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Squada+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link  rel="stylesheet" href="style.css">
     <title>Conversor de Moneda</title>
 </head>
 <body>
@@ -27,16 +36,16 @@
     <main class="main">
         <section class="section--presentation section">
             <h1 class="section__h1">Pesos Contra el Mundo</h1>
-            <h3 class="section__h3">Con el poder de <em>ExchangeRate-API:</em> Compara tus ahorros en pesos argentinos con otras monedas al instante.</h3>
+            <h3 class="section__h3">Con el poder de <em><a href="https://www.exchangerate-api.com/" aria-label="link a la API" rel="noopener noreferrer" lang="en">ExchangeRate-API:</a>ExchangeRate-API:</em> Compara tus ahorros en pesos argentinos con otras monedas al instante.</h3>
         </section>
 
-        <section aria-describedby="Conversor de moneda en tiempo real" class="section">
+        <section aria-label="Conversor de moneda en tiempo real" class="section">
             <form action="" class="section__form">
                 <h2 class="section__form__h2" id="conversor">Conversor de Divisas</h2>
                 <label for="quantity" class="section__form__label" id="quantity2">Cantidad a convertir</label>
-                <input type="number" name="quantity" id="quantity" class="section__form__input">
-                <label for="currency_i_have" class="section__form__label">Moneda a convertir</label>
-                <select name="currency_i_have" id="currency_i_have" class="section__form__select">
+                <input type="number" name="quantity" id="quantity" class="section__form__input" aria-label="Ingresar cantidad de dinero a convertir">
+                <label for="currency_i_have" class="section__form__label" >Moneda a convertir</label>
+                <select name="currency_i_have" id="currency_i_have" class="section__form__select" aria-label="Elija el tipo de divisa que usted quiere convertir a otra">
                     <option value="USD">Dólares (USD)</option>
                     <option value="ARS">Pesos Argentinos (ARS)</option>
                     <option value="EUR">Euros (EUR)</option>
@@ -48,7 +57,7 @@
                 </select>
 
                 <label for="currency_i_want" class="section__form__label">¿A qué divisa te gustaría cambiarlo?</label>
-                <select name="currency_i_want" id="currency_i_want" class="section__form__select">
+                <select name="currency_i_want" id="currency_i_want" class="section__form__select" aria-label="Elija el tipo de divisa a la que usted quiere pasar su dinero">
                     <option value="ARS">Pesos Argentinos (ARS)</option>
                     <option value="USD">Dólares (USD)</option>
                     <option value="EUR">Euros (EUR)</option>
@@ -62,7 +71,7 @@
                 <button class="section__form__button" type="button" id="boton"> Calcular 🪙 </button>
                 <input type="reset" value="Resetear" class="section__form__input section__form__input--reset">
 
-                <div id="result" class="section__form__div">
+                <div id="result" class="section__form__div" aria-live="polite">
                 <!--INSERTAMOS CON JS ESTA PARTE-->
                 </div>
             </form>
@@ -73,20 +82,20 @@
             <!--TABLA INSERTADA DESDE JS-->
         </section>
     </main>
-    <footer class="footer">
-        <section aria-describedby="información del proyecto" class="footer__section">
+    <footer class="footer" role="contentinfo">
+        <section aria-label="información del proyecto" class="footer__section" >
             <h2 class="footer__section__h2">Proyecto de Estudio</h2>
             <small class="footer__section__small">Autor Nahuel Amado (Bookinfly)</small>
             <small class="footer__section__small">Estudiante de Desarrollo Web</small>
             <small class="footer__section__small">El proyecto es una práctica realizada para practicar lo aprendido en el curso de Dalto de Mid lvl en Js, utilizando ExchangeRate-API</small>
         </section>
-        <section aria-describedby="Redes y github" class="footer__section">
-            <a href="https://github.com/Bookinfly" class="footer__section__a"><img src="./img/github_2504911.png" alt="Logo github" class="footer__section__a__img"></a>
-            <a href="https://www.linkedin.com/in/nahuel-amado/" class="footer__section__a"> <img src="./img/linkedin_2504923.png" alt="Logo de Linkedin" class="footer__section__a__img"></a>
+        <section aria-label="Redes y github" class="footer__section" aria-label="link a mis redes">
+            <a href="https://github.com/Bookinfly" class="footer__section__a"><img src="./img/github_2504911mini.png" alt="Logo github  vinculado a mi cuenta" class="footer__section__a__img" rel="noopener noreferrer"></a>
+            <a href="https://www.linkedin.com/in/nahuel-amado/" class="footer__section__a"> <img src="./img/linkedin_2504923mini.png" alt="Logo de Linkedin vinculado a mi cuenta" class="footer__section__a__img" rel="noopener noreferrer"></a>
         </section>
-        <section class="footer__section">
-            <h2 contenteditable="footer__section__h2 footer__section__h2--repo">Repositorio</h2>
-            <a class="footer__section__a--repo footer__section__a" href="https://github.com/Bookinfly/conversor-divisas">Pesos contra el mundo</a>
+        <section class="footer__section" aria-label="acceso_a_ver_el_código_en_github">
+            <h2 class="footer__section__h2 footer__section__h2--repo">Repositorio</h2>
+            <a class="footer__section__a--repo footer__section__a" href="https://github.com/Bookinfly/conversor-divisas" aria-label="link al repositorio" rel="noopener noreferrer">Pesos contra el mundo</a>
         </section>
     </footer>
     <script src="code.js"></script>
